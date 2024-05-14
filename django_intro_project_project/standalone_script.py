@@ -3,7 +3,7 @@ import django
 from django.conf import settings
 # Use this by running:
 # python standalone_script.py
-os.environ["DJANGO_SETTINGS_MODULE"] = "django_intro_project.settings"
+os.environ["DJANGO_SETTINGS_MODULE"] = "django_intro_project_project.settings"
 django.setup()
 
 print('SCRIPT START *************************')
