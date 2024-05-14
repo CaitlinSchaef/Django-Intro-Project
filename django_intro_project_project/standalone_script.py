@@ -45,4 +45,43 @@ from django_intro_project_app.models import *
 #     print(reader)
 
 
+# object_list = Author.objects.bulk_create(
+#     [
+#         Author(name='Mary Shelly'),
+#         Author(name='Grand Dam'),
+#         Author(name='Aldus Huxley'),
+#         Author(name='Burger Boy'),
+#         Author(name='Prim Proper'),
+#         Author(name='Squeaky Clean'),
+#         Author(name='Emily Bronte'),
+#         Author(name='Ovid')
+#     ]
+# )
+
+# authors = Author.objects.all()
+# for author in authors:
+#     print(author)
+
+# object_list = Book.objects.bulk_create(
+#     [
+#         Book(title='Where The Sidewalk Ends', published_date=2022),
+#         Book(title='Metamorphoses', published_date=0000),
+#         Book(title='The Odyssey', published_date=120),
+#         Book(title='Letters to Lucilius', published_date=560),
+#         Book(title='The Wizard of Oz', published_date=1945),
+#         Book(title='RedWall', published_date=2002),
+#         Book(title='Wicked', published_date=2008),
+#         Book(title='Call of the Wild', published_date=1876),
+#         Book(title='Pride and Prejudice', published_date=1771),
+#         Book(title='Brave New World', published_date=1872),
+#         Book(title='Red Fish, Blue Fish', published_date=1946),
+#         Book(title='Handmaids Tail', published_date=2005),
+#         Book(title='Llama Llama Red Pajama', published_date=2006),
+#         Book(title='The Outsiders', published_date=1956)
+#     ]
+# )
+
+# books = Book.objects.all()
+# for book in books:
+#     print(book)
 

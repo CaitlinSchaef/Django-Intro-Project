@@ -10,9 +10,8 @@ class Author(models.Model):
     
 class Book(models.Model):
     title = models.CharField(max_length=100)
-    published_date = models.CharField(max_length=100)
+    published_date = models.PositiveIntegerField()
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True)
-    # I'm leaving the published date as a CharField, but if I was just doing digits it could be PositiveIntegerField()
     #Book had to go under author, because book is the many and author is the one
     def __str__(self):
         return f'TITLE: {self.title}, PUBLICATION DATE: {self.published_date}' # AUTHOR: {self.author}
