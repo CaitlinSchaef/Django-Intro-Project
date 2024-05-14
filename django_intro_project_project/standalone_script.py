@@ -13,6 +13,7 @@ print('SCRIPT START *************************')
 # WORK BELOW
 
 from django_intro_project_app.models import *
+import random 
 
 # object_list = Reader.objects.bulk_create(
 #     [
@@ -85,3 +86,10 @@ from django_intro_project_app.models import *
 # for book in books:
 #     print(book)
 
+books = Book.objects.all()
+for b in books:    
+    author_name = random.choice(Author)
+    #getting an error at the random.choice, made it just Author, so this should give a random author
+    #then we need to apply that
+    b.author = author_name
+    b.save()

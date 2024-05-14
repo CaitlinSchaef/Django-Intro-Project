@@ -4,7 +4,7 @@ from django.db import models
 
 
 class Author(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, null=True)
     def __str__(self):
         return f'AUTHOR NAME: {self.name}'
     
@@ -14,7 +14,7 @@ class Book(models.Model):
     author = models.ForeignKey(Author, on_delete=models.SET_NULL, null=True)
     #Book had to go under author, because book is the many and author is the one
     def __str__(self):
-        return f'TITLE: {self.title}, PUBLICATION DATE: {self.published_date}' # AUTHOR: {self.author}
+        return f'TITLE: {self.title}, AUTHOR: {self.author}, PUBLICATION DATE: {self.published_date}'
 
 class Reader(models.Model):
     name = models.CharField(max_length=100)
